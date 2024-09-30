@@ -1,3 +1,4 @@
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# adminapplication
+An api based rails application for active admin 
