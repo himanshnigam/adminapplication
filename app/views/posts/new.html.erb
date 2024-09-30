@@ -1,0 +1,26 @@
+<%= form_with(model: @post, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :category %><br>
+      <%= form.collection_select :category_id, Category.all, :id, :name %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :images %><br>
+      <%= form.file_field :images, multiple: true %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>
+  

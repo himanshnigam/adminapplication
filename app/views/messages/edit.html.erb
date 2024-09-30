@@ -1,0 +1,16 @@
+<%= form_with(model: @message, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :content %><br>
+      <%= form.text_area :content %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :post %><br>
+      <%= form.collection_select :post_id, Post.all, :id, :title %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
